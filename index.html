@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Newsletter sign-up form with success message</title>
+</head>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          clifford: '#da373d',
+          Darkslategrey: 'hsl(234, 29%, 20%)',
+          Charcoalgrey: 'hsl(235, 18%, 26%)',
+          Grey: 'hsl(231, 7%, 60%)',
+          White: 'hsl(0, 0%, 100%)',
+          Tomato: 'hsl(4, 100%, 67%)'
+        },
+        screens: {
+          'sm': '640px',
+          'md': '768px',
+          'lg': '1024px',
+          'xl': '1290px',
+        },
+      }
+    }
+  }
+</script>
+
+<body>
+  <main class="md:bg-Charcoalgrey md:h-screen md:flex md:items-center md:justify-center">
+    <div id="form-div" class="md:flex md:bg-white md:h-[35rem] md:w-[75%] xl:w-[50%] md:rounded-2xl md:gap-5">
+      <section class="w-full md:hidden">
+        <img class="w-full object-cover" src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+      </section>
+      <section class="md:flex-1 md:flex md:justify-center md:flex-col md:pl-5">
+        <div class="flex flex-col gap-4 p-5 mt-4 text-Charcoalgrey">
+          <h1 class="text-Darkslategrey font-bold text-[2rem] md:text-[2.5rem] md:text-center">Stay updated!</h1>
+          <p>Join 60,000 product mangers receving monghtly updates on:</p>
+          <div class="flex items-center gap-5">
+            <img class="h-[20px] w-[20px]" src="./assets/images/icon-success.svg" alt="">
+            <p>Product discovery and building what matters</p>
+          </div>
+          <div class="flex items-center gap-5">
+            <img class="h-[20px] w-[20px]" src="./assets/images/icon-success.svg" alt="">
+            <p>Measuring to ensure updates are a success</p>
+          </div>
+          <div class="flex items-center gap-5">
+            <img class="h-[20px] w-[20px]" src="./assets/images/icon-success.svg" alt="">
+            <p>And much more!</p>
+          </div>
+        </div>
+        <form action="#" class="flex flex-col px-5 mb-5 gap-3">
+          <div class="flex flex-col gap-2">
+            <label for="email-ad" class="text-xs font-bold">Email address</label>
+            <input type="email" id="email-ad" placeholder="email@company.com" class="p-3 border border-Grey rounded-lg">
+          </div>
+          <button id="sub-btn" class="bg-Darkslategrey text-White font-semibold p-3 rounded-lg">Subscribe to monthly
+            newletter</button>
+        </form>
+      </section>
+      <section class="w-full h-full hidden md:block md:flex-1 p-4">
+        <img class="w-full h-full object-cover" src="./assets/images/illustration-sign-up-desktop.svg" alt="">
+      </section>
+    </div>
+    <div id="thanks-div"
+      class="flex justify-between flex-col h-screen px-6 py-10 md:px-8 md:bg-white md:w-[28%] xl:w-[23%] md:h-[25rem] md:rounded-2xl keep-hidden">
+      <div class="flex flex-col gap-7 mt-14 md:mt-0 md:gap-4">
+        <img class="w-[70px] md:w-[50px] h-[70px] md:h-[50px] object-cover" src="/assets/images/icon-success.svg"
+          alt="">
+        <h1 class="text-Darkslategrey font-bold text-[2.8rem] leading-[50px] md:leading-[40px] md:text-[2.5rem]">Thanks
+          for
+          subscribing!
+        </h1>
+        <p class="font-medium">A confirmation email has been sent to <span
+            class="user-email font-bold">ash@gmail.com</span>.
+          Please open it and click
+          the button inside th confirm your subscription</p>
+      </div>
+      <button id="dis-btn" class="bg-Darkslategrey text-White font-semibold p-4 md:p-3 rounded-lg">Dismiss
+        message</button>
+    </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
+
+</html>
+<!-- <div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+  Coded by <a href="#">Your Name Here</a>.
+</div> -->
