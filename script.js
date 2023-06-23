@@ -7,7 +7,8 @@ const emailError = document.querySelector('.email-error');
 
 let emailValue = '';
 
-subscribeBtn.addEventListener('click', () => {
+subscribeBtn.addEventListener('click', (e) => {
+  e.preventDefault();
   const emailValue = inputEmail.value;
   const validEmail = ValidateEmail(emailValue);
   if (!validEmail) {
